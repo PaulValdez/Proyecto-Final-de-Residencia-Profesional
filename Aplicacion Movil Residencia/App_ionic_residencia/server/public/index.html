@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionic IoT App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-button>
+                        <ion-icon name="logo-javascript"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <ion-title>Control de bodega#1</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>
+                                    Temperatura
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label>
+                                    </ion-label>
+                                    <ion-input type="number" id="temp" id="tempAct">
+                                    </ion-input>
+                                </ion-item>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>
+                                    Humedad
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label>
+                                    </ion-label>
+                                    <ion-input type="number" id="hum">
+                                    </ion-input>
+                                </ion-item>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>
+                                    Monitoreo de Actuadores
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label>
+                                    </ion-label>
+                                    <ion-input type="number" id="actVen"></ion-input>
+                                    <ion-input type="number" id="actExt"></ion-input>
+                                </ion-item>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>
+                                    Control de Actuadores
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label>
+                                    </ion-label>
+                                    <ion-button color="success" id="btnAct" slot="start">Encender</ion-button>
+                                    <ion-button color="danger" id="btnAct2" slot="start">Apagar</ion-button>
+                                </ion-item>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+    </ion-app>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/main.js" charset="utf-8"></script>
+</body>
+
+</html>
